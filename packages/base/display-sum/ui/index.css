@@ -5,6 +5,7 @@
   line-height: 0.5;
   background-color: rgb(172, 170, 170);
   border-radius: 5px;
+  padding-inline: 1rem;
 }
 
 .total {
