@@ -3,14 +3,14 @@ import "./index.css";
 function DisplayOrder() {
   return (
     <section>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
-      <p>Here are my ordered items</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
+      <p>Karlstad...............27kr</p>
     </section>
   );
 }
