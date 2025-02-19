@@ -19,6 +19,10 @@
   display: inline-block;
 }
 
+.cart:hover {
+  cursor: pointer;
+}
+
 .cart img {
   background-color: white;
   border-radius: 10px;

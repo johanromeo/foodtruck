@@ -1,0 +1,4 @@
+{
+  "name": "@foodtruck/customer-order",
+  "main": "./index.js"
+}

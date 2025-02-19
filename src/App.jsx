@@ -1,6 +1,5 @@
 import "./App.css";
 
-import { Menu } from "@foodtruck/menu";
 import { router } from "@foodtruck/router";
 import { RouterProvider } from "react-router-dom";
 
