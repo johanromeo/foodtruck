@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./index.css";
+
+import { useNavigate } from "react-router-dom";
 import { Button } from "@foodtruck/button";
 
 function ETAScreen() {
