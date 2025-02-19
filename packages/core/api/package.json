@@ -1,0 +1,4 @@
+{
+  "name": "@foodtruck/api",
+  "main": "./index.js"
+}
