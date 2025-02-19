@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 import { DisplayOrder } from "@foodtruck/display-order";
+import { Button } from "@foodtruck/button";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -12,14 +13,14 @@ function CustomerOrder() {
 
       {/* Base components under this line? */}
       <p>TOTAL: 100kr</p>
-      <button
-        onClick={
-          () => alert("User navigates to ETA screen")
-          // onClick={() => navigate("/eta-screen")}
-        }
-      >
-        Take my money
-      </button>
+      <Button
+        type={"button button__black"}
+        text={"Take My Money!"}
+        // TODO: Change onClick to ETA screen. Maybe fix onclick so it's cleaner?
+        onClick={() => {
+          navigate("/");
+        }}
+      />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.button {
+  /* NEED CHANGING LATER. VALUES ARE FOR DEMONSTRATION PURPOSE */
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 50px;
+  width: 100px;
+  padding: 0.5rem 1rem;
+}
+
+.button__black {
+  color: whitesmoke;
+  background-color: var(--button-primary-color);
+}
