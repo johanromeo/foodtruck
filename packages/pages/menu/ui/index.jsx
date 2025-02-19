@@ -1,4 +1,3 @@
-/* filepath: /C:/Users/jofil/Desktop/foodtruck/packages/pages/menu/ui/index.jsx */
 import "./index.css";
 import { DisplayMenu } from "@foodtruck/display-menu";
 
