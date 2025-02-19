@@ -16,9 +16,9 @@ function CustomerOrder() {
       <Button
         type={"button button__black"}
         text={"Take My Money!"}
-        // TODO: Change onClick to ETA screen. Maybe fix onclick so it's cleaner?
+        // TODO: Maybe fix onclick so it's cleaner?
         onClick={() => {
-          navigate("/");
+          navigate("/eta");
         }}
       />
     </div>

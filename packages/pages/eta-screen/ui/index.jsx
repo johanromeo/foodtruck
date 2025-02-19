@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 import { Button } from "@foodtruck/button";
 
 function ETAScreen() {
+  const navigate = useNavigate();
+
   return (
     <div className="eta-wrapper">
       <header>
@@ -13,7 +16,7 @@ function ETAScreen() {
       <p>#4kfsdp59d</p>
       <Button
         type={"black"}
-        onClick={() => alert("New Order")}
+        onClick={() => navigate("/")}
         text={"GÖR EN NY BESTÄLLNING"}
       />
       <Button
