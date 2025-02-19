@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Menu } from "@foodtruck/menu";
 import { CustomerOrder } from "@foodtruck/customer-order";
 import { ETAScreen } from "@foodtruck/eta-screen";
+import { Receipt } from "@foodtruck/receipt";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/eta",
     element: <ETAScreen />,
+  },
+  {
+    path: "/receipt",
+    element: <Receipt />,
   },
 ]);
 

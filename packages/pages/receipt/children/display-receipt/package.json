@@ -1,0 +1,4 @@
+{
+  "name": "@foodtruck/display-receipt",
+  "main": "./index.js"
+}

@@ -22,7 +22,7 @@ function ETAScreen() {
       />
       <Button
         type={"transparent"}
-        onClick={() => alert("See Receipts")}
+        onClick={() => navigate("/receipt")}
         text={"SE KVITTO"}
       />
     </div>
