@@ -1,4 +1,9 @@
 .menu-card-container {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px dotted whitesmoke;
+}
+
+.dots {
+  border-bottom: 1px dotted whitesmoke;
 }
