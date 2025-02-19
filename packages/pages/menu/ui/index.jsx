@@ -4,13 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 import { DisplayMenu } from "@foodtruck/display-menu";
 
-import { useGetMenuQuery } from "@foodtruck/api";
-
 function Menu() {
   const navigate = useNavigate();
 
-  const { data, error, isLoading } = useGetMenuQuery();
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="menu">

@@ -1,4 +1,6 @@
 .display-menu-container {
+  display: flex;
+  flex-direction: column;
   color: whitesmoke;
   background-color: var(--secondary-background-color);
   padding: 0.2rem 1rem;
