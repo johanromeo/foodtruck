@@ -1,9 +1,11 @@
 import "./index.css";
 
+import { DisplayOrder } from "@foodtruck/display-order";
+
 function CustomerOrder() {
   return (
     <div>
-      <h1>Customer Order Father</h1>
+      <DisplayOrder />
     </div>
   );
 }
