@@ -8,6 +8,9 @@
 
   --menu-background-color: #8ed8bf;
   --secondary-background-color: #605858;
+  --cart-number-background-color: #eb5757;
+  --button-primary-color: #353131;
+  --display-total-background-color: #3531313d;
 }
 
 body {
