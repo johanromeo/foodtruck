@@ -1,13 +1,19 @@
 .button {
   /* NEED CHANGING LATER. VALUES ARE FOR DEMONSTRATION PURPOSE */
+  color: whitesmoke;
   font-weight: bold;
   text-transform: uppercase;
   height: 50px;
   width: 100px;
   padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
 }
 
 .button__black {
-  color: whitesmoke;
   background-color: var(--button-primary-color);
+}
+
+.button__transparent {
+  background-color: inherit;
 }
