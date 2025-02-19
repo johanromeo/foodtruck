@@ -1,10 +1,10 @@
 .button {
   /* NEED CHANGING LATER. VALUES ARE FOR DEMONSTRATION PURPOSE */
+
   color: whitesmoke;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
-  height: 50px;
-  width: 100px;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
@@ -15,5 +15,6 @@
 }
 
 .button__transparent {
+  border: 2px solid whitesmoke;
   background-color: inherit;
 }
