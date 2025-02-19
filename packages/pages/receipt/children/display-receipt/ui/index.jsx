@@ -1,3 +1,4 @@
+import { DisplaySum } from "@foodtruck/display-sum/ui";
 import "./index.css";
 
 function DisplayReceipt() {
@@ -13,7 +14,7 @@ function DisplayReceipt() {
       <p>KARLSTAD.................27 SEK</p>
       <p>KARLSTAD.................27 SEK</p>
       <p>KARLSTAD.................27 SEK</p>
-      <p>TOTALT 100 SEK</p>
+      <DisplaySum />
     </div>
   );
 }

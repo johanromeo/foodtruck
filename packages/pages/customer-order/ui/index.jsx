@@ -3,6 +3,7 @@ import "./index.css";
 
 import { DisplayOrder } from "@foodtruck/display-order";
 import { Button } from "@foodtruck/button";
+import { DisplaySum } from "@foodtruck/display-sum";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function CustomerOrder() {
       <DisplayOrder />
 
       {/* Base components under this line? */}
-      <p>TOTAL: 100kr</p>
+      <DisplaySum />
       <Button
         type={"button button__black"}
         text={"Take My Money!"}

@@ -1,0 +1,16 @@
+.display-sum-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.5;
+  background-color: rgb(172, 170, 170);
+  border-radius: 5px;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.moms {
+  font-weight: 200;
+}
