@@ -4,6 +4,7 @@ import "./index.css";
 import { useGetMenuQuery } from "@foodtruck/api";
 
 function DisplayMenu() {
+  //TODO: Add error and isLoading ternary operators...
   const { data, error, isLoading } = useGetMenuQuery();
 
   const menuCardComponents = data?.items.map((item) => {

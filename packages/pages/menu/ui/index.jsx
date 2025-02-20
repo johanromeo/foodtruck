@@ -7,8 +7,6 @@ import { DisplayMenu } from "@foodtruck/display-menu";
 function Menu() {
   const navigate = useNavigate();
 
-  // console.log(data);
-
   return (
     <div className="menu">
       <header>

@@ -7,7 +7,6 @@ function MenuCard({ item }) {
     <article className="menu-card-container">
       <div>
         <p>{item.name}</p>
-        <div className="dots"></div>
         <p>{ingredients}</p>
       </div>
       <div className="menu-price">
