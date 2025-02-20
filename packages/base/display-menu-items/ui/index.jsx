@@ -1,9 +1,11 @@
 import "./index.css";
 
-function DisplayMenuItems({ item }) {
+function DisplayMenuItems({ item, handleOnClick }) {
   return (
-    <article className="menu-items-container">
-      {/* Dip sauce/Beverage items placed here */}
+    <article
+      className="menu-items-container"
+      onClick={() => handleOnClick(item.id)}
+    >
       <p>{item.name}</p>
     </article>
   );

@@ -11,30 +11,41 @@ function DisplayMenu() {
   const { data, error, isLoading } = useGetMenuQuery();
   const dispatch = useDispatch();
 
-  function handleAddToCart(menuItemId) {
-    dispatch(addToCart(menuItemId));
-    console.log("Menu item with id " + menuItemId + " added!");
+  function handleAddToCart(menuItem) {
+    dispatch(addToCart(menuItem));
   }
 
-  //TODO: Change name on package to not mix with DisplayMenuItems?
   const wontons = (data?.items || []).filter((item) => item.type === "wonton");
   const menuCardComponents = wontons.map((item) => {
     return (
-      <MenuCard key={item.id} item={item} handleOnClick={handleAddToCart} />
+      <MenuCard
+        key={item.id}
+        item={item}
+        handleOnClick={() => handleAddToCart(item)}
+      />
     );
   });
 
-  // Filter array. Source: https://react.dev/learn/rendering-lists#filtering-arrays-of-items
-  // "(data?.items || [])" is a protection against undefined data and errors, so that
-  // the .map() always has an array to work with
   const dipSauces = (data?.items || []).filter((item) => item.type === "dip");
-  const dipSauceComponents = dipSauces.map((dipSauce) => {
-    return <DisplayMenuItems key={dipSauce.id} item={dipSauce} />;
+  const dipSauceComponents = dipSauces.map((item) => {
+    return (
+      <DisplayMenuItems
+        key={item.id}
+        item={item}
+        handleOnClick={() => handleAddToCart(item)}
+      />
+    );
   });
 
   const drinks = (data?.items || []).filter((item) => item.type === "drink");
-  const drinkComponents = drinks.map((drink) => {
-    return <DisplayMenuItems key={drink.id} item={drink} />;
+  const drinkComponents = drinks.map((item) => {
+    return (
+      <DisplayMenuItems
+        key={item.id}
+        item={item}
+        handleOnClick={() => handleAddToCart(item)}
+      />
+    );
   });
 
   return (
