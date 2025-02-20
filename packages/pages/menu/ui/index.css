@@ -7,6 +7,7 @@
 .menu header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .menu header img {
@@ -16,7 +17,13 @@
 
 .cart {
   position: relative;
-  display: inline-block;
+  display: inline-block; /* or inline-block; flex just makes centering easier */
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  align-items: center; /* center the icon */
+  justify-content: center;
 }
 
 .cart:hover {
@@ -24,17 +31,19 @@
 }
 
 .cart img {
-  background-color: white;
-  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  /* no background color here */
 }
 
 .cart p {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px; /* shift the bubble above the top edge */
+  right: -5px; /* shift the bubble to the right edge */
   margin: 0;
   color: whitesmoke;
   background-color: var(--cart-number-background-color);
   border-radius: 50%;
-  padding: 2px 4px;
+  padding: 2px 8px;
+  z-index: 1; /* to ensure it’s on top of the icon */
 }
