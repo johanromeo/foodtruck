@@ -6,6 +6,7 @@ export const apiSlice = createApi({
     baseUrl: "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com",
   }),
   endpoints: (builder) => ({
+    // MENU ENDPOINTS
     getMenu: builder.query({
       query: () => ({
         url: "/menu",
@@ -24,6 +25,8 @@ export const apiSlice = createApi({
         },
       }),
     }),
+
+    // ORDER ENDPOINTS
   }),
 });
 
