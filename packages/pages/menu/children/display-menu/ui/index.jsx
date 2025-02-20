@@ -1,17 +1,27 @@
+import "./index.css";
+import { useDispatch } from "react-redux";
 import { MenuCard } from "@foodtruck/menu-card";
 import { DisplayMenuItems } from "@foodtruck/display-menu-items";
-import "./index.css";
 
 import { useGetMenuQuery } from "@foodtruck/api";
+import { addToCart } from "@foodtruck/reducers";
 
 function DisplayMenu() {
   //TODO: Add error and isLoading ternary operators...
   const { data, error, isLoading } = useGetMenuQuery();
+  const dispatch = useDispatch();
+
+  function handleAddToCart(menuItemId) {
+    dispatch(addToCart(menuItemId));
+    console.log("Menu item with id " + menuItemId + " added!");
+  }
 
   //TODO: Change name on package to not mix with DisplayMenuItems?
   const wontons = (data?.items || []).filter((item) => item.type === "wonton");
   const menuCardComponents = wontons.map((item) => {
-    return <MenuCard key={item.id} item={item} />;
+    return (
+      <MenuCard key={item.id} item={item} handleOnClick={handleAddToCart} />
+    );
   });
 
   // Filter array. Source: https://react.dev/learn/rendering-lists#filtering-arrays-of-items

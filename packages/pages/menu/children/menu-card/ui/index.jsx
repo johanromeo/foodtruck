@@ -1,10 +1,13 @@
 import "./index.css";
 
-function MenuCard({ item }) {
+function MenuCard({ item, handleOnClick }) {
   let ingredients = item.ingredients?.join(", ");
 
   return (
-    <article className="menu-card-container">
+    <article
+      className="menu-card-container"
+      onClick={() => handleOnClick(item.id)}
+    >
       <div>
         <p>{item.name}</p>
         <p>{ingredients}</p>
