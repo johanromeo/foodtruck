@@ -15,8 +15,8 @@ function DisplayMenu() {
   });
 
   // Filter array. Source: https://react.dev/learn/rendering-lists#filtering-arrays-of-items
-  // "(data?.items || [])" is a protection against undefined data and errors, so that the map() has an
-  // array to work with
+  // "(data?.items || [])" is a protection against undefined data and errors, so that
+  // the .map() always has an array to work with
   const dipSauces = (data?.items || []).filter((item) => item.type === "dip");
   const dipSauceComponents = dipSauces.map((dipSauce) => {
     return <DisplayMenuItems key={dipSauce.id} item={dipSauce} />;
