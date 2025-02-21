@@ -1,8 +1,10 @@
 import "./index.css";
-
-//TODO: Need className fixing
+import { useSelector } from "react-redux";
 
 function DisplaySum() {
+  const cart = useSelector((state) => state.cart);
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
   return (
     <div className="display-sum-container">
       <div>
@@ -10,7 +12,7 @@ function DisplaySum() {
         <p className="moms">inkl 20% moms</p>
       </div>
       <div className="total">
-        <p>101 SEK</p>
+        <p>{total} SEK</p>
       </div>
     </div>
   );
