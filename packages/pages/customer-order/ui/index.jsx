@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./index.css";
 
+import { useNavigate } from "react-router-dom";
 import { DisplayOrder } from "@foodtruck/display-order";
 import { Button } from "@foodtruck/button";
 import { DisplaySum } from "@foodtruck/display-sum";
@@ -21,6 +21,7 @@ function CustomerOrder() {
   function handlePlaceOrderMutation(items) {
     placeOrder(items);
   }
+  console.log(data);
 
   return (
     <div>
@@ -30,7 +31,7 @@ function CustomerOrder() {
         type={"button button__black"}
         text={"Take My Money!"}
         onClick={() => {
-          hand;
+          handlePlaceOrderMutation(items);
           navigate("/eta");
         }}
       />

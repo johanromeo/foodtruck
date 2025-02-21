@@ -36,7 +36,7 @@ export const apiSlice = createApi({
           // RTK Query automatically sets this content type. But just to make sure...
           "Content-Type": "application/json",
         },
-        body: items,
+        body: { items },
       }),
     }),
   }),
