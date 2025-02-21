@@ -4,7 +4,7 @@ function DisplayMenuItems({ item, handleOnClick }) {
   return (
     <article
       className="menu-items-container"
-      onClick={() => handleOnClick(item.id)}
+      onClick={() => handleOnClick(item)}
     >
       <p>{item.name}</p>
     </article>

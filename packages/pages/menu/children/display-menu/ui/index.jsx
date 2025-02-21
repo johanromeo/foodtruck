@@ -2,12 +2,10 @@ import "./index.css";
 import { useDispatch } from "react-redux";
 import { MenuCard } from "@foodtruck/menu-card";
 import { DisplayMenuItems } from "@foodtruck/display-menu-items";
-
 import { useGetMenuQuery } from "@foodtruck/api";
 import { addToCart } from "@foodtruck/reducers";
 
 function DisplayMenu() {
-  //TODO: Add error and isLoading ternary operators...
   const { data, error, isLoading } = useGetMenuQuery();
   const dispatch = useDispatch();
 
@@ -15,38 +13,35 @@ function DisplayMenu() {
     dispatch(addToCart(menuItem));
   }
 
-  const wontons = (data?.items || []).filter((item) => item.type === "wonton");
-  const menuCardComponents = wontons.map((item) => {
-    return (
-      <MenuCard
-        key={item.id}
-        item={item}
-        handleOnClick={() => handleAddToCart(item)}
-      />
-    );
-  });
+  const items = data?.items || [];
 
-  const dipSauces = (data?.items || []).filter((item) => item.type === "dip");
-  const dipSauceComponents = dipSauces.map((item) => {
-    return (
-      <DisplayMenuItems
-        key={item.id}
-        item={item}
-        handleOnClick={() => handleAddToCart(item)}
-      />
-    );
-  });
+  const wontons = items.filter((item) => item.type === "wonton");
+  const dipSauces = items.filter((item) => item.type === "dip");
+  const drinks = items.filter((item) => item.type === "drink");
 
-  const drinks = (data?.items || []).filter((item) => item.type === "drink");
-  const drinkComponents = drinks.map((item) => {
-    return (
-      <DisplayMenuItems
-        key={item.id}
-        item={item}
-        handleOnClick={() => handleAddToCart(item)}
-      />
-    );
-  });
+  const menuCardComponents = wontons.map((item) => (
+    <MenuCard
+      key={item.id}
+      item={item}
+      handleOnClick={() => handleAddToCart(item)}
+    />
+  ));
+
+  const dipSauceComponents = dipSauces.map((item) => (
+    <DisplayMenuItems
+      key={item.id}
+      item={item}
+      handleOnClick={() => handleAddToCart(item)}
+    />
+  ));
+
+  const drinkComponents = drinks.map((item) => (
+    <DisplayMenuItems
+      key={item.id}
+      item={item}
+      handleOnClick={() => handleAddToCart(item)}
+    />
+  ));
 
   return (
     <section className="display-menu-container">

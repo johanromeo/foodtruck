@@ -6,7 +6,7 @@ function MenuCard({ item, handleOnClick }) {
   return (
     <article
       className="menu-card-container"
-      onClick={() => handleOnClick(item.id)}
+      onClick={() => handleOnClick(item)}
     >
       <div>
         <p>{item.name}</p>
