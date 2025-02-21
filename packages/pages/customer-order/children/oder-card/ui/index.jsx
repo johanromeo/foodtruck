@@ -6,9 +6,11 @@ function OrderCard({ item, handleOnClick }) {
       className="order-card-container"
       onClick={() => handleOnClick(item)}
     >
-      <p>{item.name}</p>
-      <p>{item.price}</p>
-      <p>{item.quantity}</p>
+      <div>
+        <p className="order-bold">{item.name}</p>
+        <p className="order-light">{item.quantity} stycken</p>
+      </div>
+      <p className="order-bold">{item.price} SEK</p>
     </article>
   );
 }
