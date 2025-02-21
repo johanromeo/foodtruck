@@ -7,6 +7,7 @@ import { addToCart } from "@foodtruck/reducers";
 
 function DisplayMenu() {
   const { data, error, isLoading } = useGetMenuQuery();
+
   const dispatch = useDispatch();
 
   function handleAddToCart(menuItem) {

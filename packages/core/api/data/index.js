@@ -39,8 +39,22 @@ export const apiSlice = createApi({
         body: { items },
       }),
     }),
+
+    getOrders: builder.query({
+      query: () => ({
+        url: "/cv5e/orders",
+        method: "GET",
+        headers: {
+          "x-zocom": "yum-qqO7Lv5Hg29t5hqI",
+        },
+      }),
+    }),
   }),
 });
 
-export const { useGetMenuQuery, useGetMenuItemQuery, usePlaceOrderMutation } =
-  apiSlice;
+export const {
+  useGetMenuQuery,
+  useGetMenuItemQuery,
+  usePlaceOrderMutation,
+  useGetOrdersQuery,
+} = apiSlice;

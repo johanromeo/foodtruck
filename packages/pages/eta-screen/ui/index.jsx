@@ -2,9 +2,13 @@ import "./index.css";
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@foodtruck/button";
+import { useGetOrdersQuery } from "@foodtruck/api";
 
 function ETAScreen() {
   const navigate = useNavigate();
+  const { data, error, isLoading } = useGetOrdersQuery();
+
+  console.log(data);
 
   return (
     <div className="eta-wrapper">
