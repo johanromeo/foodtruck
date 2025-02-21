@@ -42,4 +42,5 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetMenuQuery, useGetMenuItemQuery } = apiSlice;
+export const { useGetMenuQuery, useGetMenuItemQuery, usePlaceOrderMutation } =
+  apiSlice;

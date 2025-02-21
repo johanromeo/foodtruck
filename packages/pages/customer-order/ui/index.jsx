@@ -5,9 +5,11 @@ import { DisplayOrder } from "@foodtruck/display-order";
 import { Button } from "@foodtruck/button";
 import { DisplaySum } from "@foodtruck/display-sum";
 import { useSelector } from "react-redux";
+import { usePlaceOrderMutation } from "@foodtruck/api";
 
 function CustomerOrder() {
   const navigate = useNavigate();
+  const [placeOrder, { data, error, isLoading }] = usePlaceOrderMutation();
   const cart = useSelector((state) => state.cart);
 
   // Add all the cart items in an "items" array.
@@ -16,6 +18,9 @@ function CustomerOrder() {
   console.log(items);
 
   // Call API endpoint to place an order and pass items[] as body.
+  function handlePlaceOrderMutation(items) {
+    placeOrder(items);
+  }
 
   return (
     <div>
@@ -25,6 +30,7 @@ function CustomerOrder() {
         type={"button button__black"}
         text={"Take My Money!"}
         onClick={() => {
+          hand;
           navigate("/eta");
         }}
       />
