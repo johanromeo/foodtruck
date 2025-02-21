@@ -27,6 +27,18 @@ export const apiSlice = createApi({
     }),
 
     // ORDER ENDPOINTS
+    placeOrder: builder.mutation({
+      query: (items) => ({
+        url: "/cv5e/orders",
+        method: "POST",
+        headers: {
+          "x-zocom": "yum-qqO7Lv5Hg29t5hqI",
+          // RTK Query automatically sets this content type. But just to make sure...
+          "Content-Type": "application/json",
+        },
+        body: items,
+      }),
+    }),
   }),
 });
 
