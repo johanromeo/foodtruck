@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <ETAScreen />,
   },
   {
-    path: "/receipt",
+    path: "/receipt/:orderId",
     element: <Receipt />,
   },
 ]);

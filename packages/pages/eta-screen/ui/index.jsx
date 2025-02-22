@@ -29,7 +29,7 @@ function ETAScreen() {
       />
       <Button
         type={"transparent"}
-        onClick={() => navigate("/receipt")}
+        onClick={() => navigate(`/receipt/${orderId}`)}
         text={"SE KVITTO"}
       />
     </div>
