@@ -60,6 +60,15 @@ export const apiSlice = createApi({
     }),
 
     // RECEIPT ENDPOINTS
+    getReceiptById: builder.query({
+      query: (id) => ({
+        url: `/receipts/${id}`,
+        method: "GET",
+        headers: {
+          "x-zocom": "yum-qqO7Lv5Hg29t5hqI",
+        },
+      }),
+    }),
   }),
 });
 
@@ -69,4 +78,5 @@ export const {
   usePlaceOrderMutation,
   useGetOrdersQuery,
   useGetOrderByIdQuery,
+  useGetReceiptByIdQuery,
 } = apiSlice;
