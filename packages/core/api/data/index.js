@@ -49,6 +49,17 @@ export const apiSlice = createApi({
         },
       }),
     }),
+    getOrderById: builder.query({
+      query: (id) => ({
+        url: `/cv5e/orders/${id}`,
+        method: "GET",
+        headers: {
+          "x-zocom": "yum-qqO7Lv5Hg29t5hqI",
+        },
+      }),
+    }),
+
+    // RECEIPT ENDPOINTS
   }),
 });
 
@@ -57,4 +68,5 @@ export const {
   useGetMenuItemQuery,
   usePlaceOrderMutation,
   useGetOrdersQuery,
+  useGetOrderByIdQuery,
 } = apiSlice;
