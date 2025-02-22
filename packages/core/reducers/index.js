@@ -1,1 +1,1 @@
-export * from "./data/cartSlice";
+export * from "./data";

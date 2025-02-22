@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <CustomerOrder />,
   },
   {
-    path: "/eta",
+    path: "/eta/:orderId",
     element: <ETAScreen />,
   },
   {

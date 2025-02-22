@@ -6,7 +6,7 @@ import { Button } from "@foodtruck/button";
 import { DisplaySum } from "@foodtruck/display-sum";
 import { useSelector, useDispatch } from "react-redux";
 import { usePlaceOrderMutation } from "@foodtruck/api";
-import { emptyCart } from "@foodtruck/reducers";
+import { emptyCart, saveOrderId } from "@foodtruck/reducers";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -14,19 +14,19 @@ function CustomerOrder() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  // Add all the cart items in an "items" array.
-  // If quantity of an item is > 0, multiple id of a same item will be added, like [1, 1, 2, 5, 6, 6, 6]
   const items = cart.flatMap((item) => Array(item.quantity).fill(item.id));
-  console.log(items);
 
-  // Call API endpoint to place an order and pass items[] as body.
-  function handlePlaceOrderMutation(items) {
-    placeOrder(items);
-    if (!error) {
-      dispatch(emptyCart());
+  // Break out into separate file for cleanliness?
+  async function handlePlaceOrderMutation() {
+    try {
+      const response = await placeOrder(items).unwrap();
+      const orderId = response.order.id;
+      dispatch(saveOrderId(orderId));
+      navigate(`/eta/${orderId}`);
+    } catch (error) {
+      console.error("Order placement failed:", error);
     }
   }
-  console.log(data);
 
   return (
     <div>
@@ -37,7 +37,6 @@ function CustomerOrder() {
         text={"Take My Money!"}
         onClick={() => {
           handlePlaceOrderMutation(items);
-          navigate("/eta");
         }}
       />
     </div>
