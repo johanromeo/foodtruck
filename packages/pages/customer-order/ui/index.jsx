@@ -29,16 +29,22 @@ function CustomerOrder() {
   }
 
   return (
-    <div>
+    <div className="customer-order-container">
+      <header className="order-header">
+        <img src="/src/assets/cart-icon.svg" alt="cart icon" />
+      </header>
       <DisplayOrder />
-      <DisplaySum />
-      <Button
-        type={"button button__black"}
-        text={"Take My Money!"}
-        onClick={() => {
-          handlePlaceOrderMutation(items);
-        }}
-      />
+      <div className="order-border"></div>
+      <div className="bottom-buttons">
+        <DisplaySum />
+        <Button
+          type={"button button__black"}
+          text={"Take My Money!"}
+          onClick={() => {
+            handlePlaceOrderMutation(items);
+          }}
+        />
+      </div>
     </div>
   );
 }

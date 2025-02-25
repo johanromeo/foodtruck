@@ -1,0 +1,24 @@
+/* .customer-order-container {
+  padding: 30px;
+  width: 30%;
+} */
+
+.customer-order-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30px;
+  width: 30%;
+}
+.order-header {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 2rem;
+  border-bottom: 3px dotted rgb(221, 215, 215);
+  padding-bottom: 2rem;
+}
+
+.bottom-buttons {
+  margin-top: auto;
+  z-index: 1000;
+}
