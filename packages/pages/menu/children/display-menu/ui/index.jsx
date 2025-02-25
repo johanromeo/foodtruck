@@ -45,7 +45,7 @@ function DisplayMenu() {
   ));
 
   return (
-    <section className="display-menu-container">
+    <div className="display-menu-container">
       <div className="display-menu-title">
         <h2>Meny</h2>
       </div>
@@ -60,7 +60,7 @@ function DisplayMenu() {
         <p>19 SEK</p>
       </div>
       <div className="menu-types">{drinkComponents}</div>
-    </section>
+    </div>
   );
 }
 

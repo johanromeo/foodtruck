@@ -18,7 +18,7 @@ function ETAScreen() {
       <header>
         <p>YYGS logo</p>
       </header>
-      <img src="/src/assets/food-box.png" alt="" />
+      <img src="/src/assets/food-box.png" alt="YYGS logo in red" />
       <h2>DINA WONTONS TILLAGAS!</h2>
       <h3>ETA {data?.order.eta}</h3>
       <p>#{data?.order.id}</p>

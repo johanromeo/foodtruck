@@ -2,12 +2,14 @@
   background-image: url("/src/assets/background.png");
   background-color: var(--menu-background-color);
   padding: 30px;
+  width: 100%;
 }
 
 .menu header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  margin-inline: 2rem;
 }
 
 .menu header img {
