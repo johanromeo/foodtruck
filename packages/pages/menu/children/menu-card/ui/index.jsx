@@ -9,11 +9,11 @@ function MenuCard({ item, handleOnClick }) {
       onClick={() => handleOnClick(item)}
     >
       <div>
-        <p>{item.name}</p>
-        <p>{ingredients}</p>
+        <p className="bold">{item.name}</p>
+        <p className="light">{ingredients}</p>
       </div>
       <div className="menu-price">
-        <p>{item.price} SEK</p>
+        <p className="bold">{item.price} SEK</p>
       </div>
     </article>
   );
