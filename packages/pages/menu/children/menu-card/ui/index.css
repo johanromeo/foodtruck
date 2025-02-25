@@ -1,11 +1,31 @@
 .menu-card-container {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px dotted rgba(245, 245, 245, 0.37);
+  /* display: flex;
+  justify-content: space-between; */
+  border-bottom: 1px dotted rgba(245, 245, 245, 0.37);
   cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 1rem;
 }
 
 .menu-card-container:hover {
-  background-color: rgb(172, 170, 170);
   border-radius: 10px;
+  transform: scale(1.05);
+}
+
+.menu-item-info {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu-line {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dots {
+  margin-inline: 1rem;
+  flex: 1;
+  border-bottom: 2px dotted rgb(245, 242, 242);
 }

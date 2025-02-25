@@ -9,13 +9,22 @@
   border-radius: 10px;
 }
 
+.menu-title {
+  font-size: 2rem;
+}
 .menu-types-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .menu-types {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dotted {
+  border-top: 1px solid red;
 }

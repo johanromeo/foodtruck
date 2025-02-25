@@ -45,19 +45,39 @@ function DisplayMenu() {
   ));
 
   return (
+    // <div className="display-menu-container">
+    //   <div className="display-menu-title">
+    //     <h2 className="menu-title">MENY</h2>
+    //   </div>
+    //   <div>{menuCardComponents}</div>
+    //   <div className="menu-types-container">
+    //     <p>Dipsås</p>
+
+    //     <p>19 SEK</p>
+    //   </div>
+    //   <div className="menu-types">{dipSauceComponents}</div>
+    //   <div className="menu-types-container">
+    //     <p>Dricka</p>
+    //     <p>19 SEK</p>
+    //   </div>
+    //   <div className="menu-types">{drinkComponents}</div>
+    // </div>
+
     <div className="display-menu-container">
       <div className="display-menu-title">
-        <h2>Meny</h2>
+        <h2 className="menu-title">MENY</h2>
       </div>
       <div>{menuCardComponents}</div>
       <div className="menu-types-container">
-        <p>Dipsås</p>
-        <p>19 SEK</p>
+        <span className="menu-item-info">DIPSÅS</span>
+        <span className="dots"></span>
+        <span className="menu-item-info">19 SEK</span>
       </div>
       <div className="menu-types">{dipSauceComponents}</div>
       <div className="menu-types-container">
-        <p>Dricka</p>
-        <p>19 SEK</p>
+        <span className="menu-item-info">DRICKA</span>
+        <span className="dots"></span>
+        <span className="menu-item-info">19 SEK</span>
       </div>
       <div className="menu-types">{drinkComponents}</div>
     </div>
