@@ -1,8 +1,32 @@
 .eta-wrapper {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--secondary-background-color);
+  color: whitesmoke;
+}
+
+.eta-header {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.eta-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.eta-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-background-color);
-  color: whitesmoke;
+  line-height: 0.5;
+  margin-bottom: 2rem;
+}
+
+.eta-button {
+  margin-bottom: 1rem;
 }

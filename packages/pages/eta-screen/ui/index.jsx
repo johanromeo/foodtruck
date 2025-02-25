@@ -15,18 +15,22 @@ function ETAScreen() {
 
   return (
     <div className="eta-wrapper">
-      <header>
-        <p>YYGS logo</p>
-      </header>
-      <img src="/src/assets/food-box.png" alt="YYGS logo in red" />
-      <h2>DINA WONTONS TILLAGAS!</h2>
-      <h3>ETA {data?.order.eta}</h3>
-      <p>#{data?.order.id}</p>
-      <Button
-        type={"black"}
-        onClick={() => navigate("/")}
-        text={"GÖR EN NY BESTÄLLNING"}
-      />
+      <div className="eta-header">
+        <img className="eta-logo" src="/src/assets/white-logo.png" alt="logo" />
+      </div>
+      <div className="eta-body">
+        <img src="/src/assets/food-box.png" alt="YYGS logo in red" />
+        <h2>DINA WONTONS TILLAGAS!</h2>
+        <h3>ETA {data?.order.eta}</h3>
+        <p>#{data?.order.id}</p>
+      </div>
+      <div className="eta-button">
+        <Button
+          type={"black"}
+          onClick={() => navigate("/")}
+          text={"GÖR EN NY BESTÄLLNING"}
+        />
+      </div>
       <Button
         type={"transparent"}
         onClick={() => navigate(`/receipt/${orderId}`)}
