@@ -4,8 +4,9 @@
   justify-content: center;
   color: whitesmoke;
   background-color: var(--secondary-background-color);
-  padding: 0.2rem 1rem;
+  padding: 2.2rem 5rem;
   margin-inline: 2rem;
+  border-radius: 10px;
 }
 
 .menu-types-container {
