@@ -22,6 +22,7 @@ function CustomerOrder() {
       const response = await placeOrder(items).unwrap();
       const orderId = response.order.id;
       dispatch(saveOrderId(orderId));
+      dispatch(emptyCart());
       navigate(`/eta/${orderId}`);
     } catch (error) {
       console.error("Order placement failed:", error);
