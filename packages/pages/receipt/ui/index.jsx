@@ -13,10 +13,10 @@ function Receipt() {
   console.log(data);
 
   return (
-    <div className="wrapper">
-      <header>
-        <p>YYGS logo</p>
-      </header>
+    <div className="receipt-wrapper">
+      <div className="receipt-header">
+        <img className="eta-logo" src="/src/assets/white-logo.png" alt="logo" />
+      </div>
       <DisplayReceipt data={data} items={data?.receipt?.items} />
       <Button
         type={"black"}

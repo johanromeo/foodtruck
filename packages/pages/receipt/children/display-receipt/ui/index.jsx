@@ -4,34 +4,36 @@ import "./index.css";
 function DisplayReceipt({ data, items }) {
   return (
     <div className="receipt-container">
-      <div className="receipt-info">
-        <img
-          className="red-logo"
-          src="/src/assets/red-logo.png"
-          alt="YYGS logo"
-        />
-        <h2>KVITTO</h2>
-        {/* Access the receipt id from the nested data */}
-        <p>#{data?.receipt?.id}</p>
-      </div>
-      <div className="receipt-items">
-        {items &&
-          items.map((item) => (
-            <div className="receipt-specific" key={item.id}>
-              <div>
-                <p className="bold">{item.name}</p>
-                <p className="light">Quantity: {item.quantity}</p>
+      <div className="receipt-margin-container">
+        <div className="receipt-info">
+          <img
+            className="red-logo"
+            src="/src/assets/red-logo.png"
+            alt="YYGS logo"
+          />
+          <h2 className="receipt-title">KVITTO</h2>
+          <p className="receipt-id">#{data?.receipt?.id}</p>
+        </div>
+
+        <div className="receipt-menu-line">
+          {items &&
+            items.map((item) => (
+              <div className="receipt-menu-item" key={item.id}>
+                <div className="receipt-specific">
+                  <span className="receipt-menu-item-info">{item.name}</span>
+                  <span className="receipt-dots"></span>
+                  <span className="receipt-menu-item-info">
+                    {item.price} SEK
+                  </span>
+                </div>
+                <div>
+                  <p className="receipt-item-qty">{item.quantity} st</p>
+                </div>
               </div>
-              <div>
-                <p className="bold">Price: {item.price}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
-      <div>
-        <p>total: {data?.receipt?.orderValue}</p>
-      </div>
-      {/* <DisplaySum /> */}
+      <DisplaySum />
     </div>
   );
 }
