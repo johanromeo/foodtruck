@@ -29,7 +29,6 @@ function CustomerOrder() {
     }
   }
 
-  // Move out this to parent component and pass it as a total={total} prop instead so we can use this component more dynamically
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
