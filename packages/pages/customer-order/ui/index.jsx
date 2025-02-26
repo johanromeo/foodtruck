@@ -29,6 +29,9 @@ function CustomerOrder() {
     }
   }
 
+  // Move out this to parent component and pass it as a total={total} prop instead so we can use this component more dynamically
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
   return (
     <div className="customer-order-container">
       <header className="order-header">
@@ -37,7 +40,7 @@ function CustomerOrder() {
       <DisplayOrder />
       <div className="order-border"></div>
       <div className="bottom-buttons">
-        <DisplaySum />
+        <DisplaySum total={total} />
         <Button
           type={"button button__black"}
           text={"Take My Money!"}

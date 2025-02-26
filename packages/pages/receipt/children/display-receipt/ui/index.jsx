@@ -33,7 +33,7 @@ function DisplayReceipt({ data, items }) {
             ))}
         </div>
       </div>
-      <DisplaySum />
+      <DisplaySum total={data?.receipt?.orderValue} />
     </div>
   );
 }
