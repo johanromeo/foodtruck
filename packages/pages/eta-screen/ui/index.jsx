@@ -6,12 +6,8 @@ import { useGetOrderByIdQuery } from "@foodtruck/api";
 
 function ETAScreen() {
   const navigate = useNavigate();
-
-  // Thanks to my dynamic /eta/:orderId and useParams, I can extract the order id from the url...
   const { orderId } = useParams();
-  // ...and pass it as an argument to useGetOrderByIdQuery below.
   const { data, error, isLoading } = useGetOrderByIdQuery(orderId);
-  console.log(data);
 
   return (
     <div className="eta-wrapper">

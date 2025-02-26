@@ -17,7 +17,6 @@ const cartSlice = createSlice({
     removeFromCart(state, action) {
       const index = state.findIndex((item) => item.id === action.payload.id);
       if (index !== -1) {
-        // If the item quantity is greater than 1, decrement it
         if (state[index].quantity > 1) {
           state[index].quantity--;
         } else {

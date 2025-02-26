@@ -16,7 +16,6 @@ function CustomerOrder() {
 
   const items = cart.flatMap((item) => Array(item.quantity).fill(item.id));
 
-  // Break out into separate file for cleanliness?
   async function handlePlaceOrderMutation() {
     try {
       const response = await placeOrder(items).unwrap();

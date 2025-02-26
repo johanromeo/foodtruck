@@ -1,8 +1,3 @@
-/* .customer-order-container {
-  padding: 30px;
-  width: 30%;
-} */
-
 .customer-order-container {
   display: flex;
   flex-direction: column;
