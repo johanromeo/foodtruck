@@ -17,7 +17,9 @@ function Receipt() {
       <div className="receipt-header">
         <img className="eta-logo" src="/src/assets/white-logo.png" alt="logo" />
       </div>
-      <DisplayReceipt data={data} items={data?.receipt?.items} />
+      <div className="receipt-margin">
+        <DisplayReceipt data={data} items={data?.receipt?.items} />
+      </div>
       <Button
         type={"black"}
         onClick={() => navigate("/")}
