@@ -49,7 +49,15 @@ function DisplayMenu() {
       <div className="display-menu-title">
         <h2 className="menu-title">MENY</h2>
       </div>
-      <div>{menuCardComponents}</div>
+      <div>
+        {isLoading ? (
+          <h2>Menyn hämtas...</h2>
+        ) : error ? (
+          <h2>Menyn kunde inte hämtas</h2>
+        ) : (
+          <div>{menuCardComponents}</div>
+        )}
+      </div>
       <div className="menu-types-container">
         <span className="menu-item-info">DIPSÅS</span>
         <span className="dots"></span>
