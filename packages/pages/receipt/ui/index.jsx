@@ -18,7 +18,7 @@ function Receipt() {
       <div className="receipt-margin">
         {isLoading ? (
           <h2 style={{ color: "white", justifySelf: "center" }}>
-            Ditt kvitto hämtas
+            Ditt kvitto hämtas.
           </h2>
         ) : error ? (
           <h2 style={{ color: "white", justifySelf: "center" }}>
