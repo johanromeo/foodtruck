@@ -16,7 +16,18 @@ function Receipt() {
         <img className="eta-logo" src="/src/assets/white-logo.png" alt="logo" />
       </div>
       <div className="receipt-margin">
-        <DisplayReceipt data={data} items={data?.receipt?.items} />
+        {isLoading ? (
+          <h2 style={{ color: "white", justifySelf: "center" }}>
+            Ditt kvitto hämtas
+          </h2>
+        ) : error ? (
+          <h2 style={{ color: "white", justifySelf: "center" }}>
+            Ditt kvitto kunde inte hämtas. Vänligen kontakta kundtjänst.
+          </h2>
+        ) : (
+          <DisplayReceipt data={data} items={data?.receipt?.items} />
+        )}
+        {/* <DisplayReceipt data={data} items={data?.receipt?.items} /> */}
       </div>
       <Button
         type={"black"}
