@@ -10,8 +10,6 @@ function Receipt() {
   const { orderId } = useParams();
   const { data, error, isLoading } = useGetReceiptByIdQuery(orderId);
 
-  console.log(data);
-
   return (
     <div className="receipt-wrapper">
       <div className="receipt-header">
