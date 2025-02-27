@@ -8,13 +8,22 @@
   border-radius: 5px;
   width: 100%;
   font-size: 1.5rem;
+  transition: 0.5s;
 }
 
 .button__black {
   background-color: var(--button-primary-color);
 }
 
+.button__black:hover {
+  transform: scale(1.05);
+}
+
 .button__transparent {
   border: 2px solid whitesmoke;
   background-color: inherit;
+}
+
+.button__transparent:hover {
+  transform: scale(1.05);
 }
