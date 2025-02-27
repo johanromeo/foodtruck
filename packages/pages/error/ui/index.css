@@ -1,0 +1,35 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/assets/background.png");
+  background-color: var(--menu-background-color);
+  width: 100%;
+  height: 100vh;
+}
+
+.error-info {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  color: whitesmoke;
+  background-color: var(--secondary-background-color);
+}
+
+.error-title {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.error-taunt {
+  font-size: 2rem;
+}
+
+.error-comfort {
+  font-size: 1.2rem;
+  line-height: 0.5;
+}
