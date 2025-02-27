@@ -16,6 +16,7 @@ export const apiSlice = createApi({
         },
       }),
     }),
+
     getMenuItem: builder.query({
       query: (id) => ({
         url: `/menu/${id}`,
@@ -48,6 +49,7 @@ export const apiSlice = createApi({
         },
       }),
     }),
+
     getOrderById: builder.query({
       query: (id) => ({
         url: `/cv5e/orders/${id}`,

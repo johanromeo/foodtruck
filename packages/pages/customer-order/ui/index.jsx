@@ -10,7 +10,7 @@ import { emptyCart, saveOrderId } from "@foodtruck/reducers";
 
 function CustomerOrder() {
   const navigate = useNavigate();
-  const [placeOrder, { data, error, isLoading }] = usePlaceOrderMutation();
+  const [placeOrder, { error, isLoading }] = usePlaceOrderMutation();
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -38,6 +38,16 @@ function CustomerOrder() {
       <DisplayOrder />
       <div className="order-border"></div>
       <div className="bottom-buttons">
+        {isLoading ? (
+          <h2>Din beställning har skickats!</h2>
+        ) : error ? (
+          <h2>
+            Ett fel har inträffat vid beställning. Försök igen vid ett senare
+            tillfälle
+          </h2>
+        ) : (
+          ""
+        )}
         <DisplaySum total={total} />
         <Button
           type={"button button__black"}
