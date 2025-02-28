@@ -1,2 +1,2 @@
-export * from "./cartSlice";
-export * from "./orderSlice";
+export * from "./cart-reducer";
+export * from "./order-reducer";
